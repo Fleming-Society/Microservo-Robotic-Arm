@@ -7,9 +7,21 @@ This is a robotic arm made by using four $180^\circ$ microservos to achieve four
 ## 3D design process
 
 ### Designing the overall structure
+Overall, we follows the rules below:
+- The structure should be as light weight as possible, so that the microservo can handle the torque rather easily
+- It should be easy to manufacture, i.e. easily 3D printable
+- The arm should be long enough to have a relatively large working radius
 
+Which the 2nd item conflict with the 3rd item. The best way we can sort this out is by using stronger microservo at the junction which handles large torque.
 
 ### Transferring rotation motion into linear motion
+In one of our design. we want the claw to be able to pick up a round object such as a pencil. It will be hard to do for our first claw design which is basically two surfaces squeezing together. The cylindrical shape of a pencil will easily slip away from the claw. Also, the old design cannot pick up a cloth as it has big area of contact that will be difficult to "pinch" the cloth.
+
+We decided to go with another design, which has three tips that will be squeeze together like a Doll clamping machine. However, one difficulties we has to face to is the claw design in the doll clamping machine opens and closes by pushing a rod inwards and outwards, which is a translational motion. For our microservo, it can only do a rotational motion, which cannot fit the requirement. They is something that has to be done to somehow transfer the rotational motion of the servo into linear motion to make the whole thing works.
+
+To do that, we thought about using pinnion and gear. However, this will greatly increase the system complexity and it will be quite difficult to 3D print the structure. We can easily do it by machining metals, but it will make the whole structure much heavier which is against our 3D design philosophy mensioned earlier. We have come up with the solution that only projects $180^\circ$ rotation to the horizontal side of a circle. Sounds convoluting, here is a gif that might help!
+
+![convert rotation into linear](ukWZe.gif)
 
 
 ## Arduino coding
